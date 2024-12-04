@@ -1,0 +1,22 @@
+<script id="tmpl-nf-field-madgraph" type="text/template">
+	<#
+	var color = (data.color?data.color:'#ff0000');
+	var bgcolor = (data.bgcolor?data.bgcolor:'#ffffff');
+	var txtcolor = (data.txtcolor?data.txtcolor:'#ffffff');
+	console.log(data);
+	if (data.value=='' || data.value=='onlypercentage') { #>
+		<div id="nf-field-{{{ data.id }}}" formid="{{{ data.formID }}}" graph-type="{{{ data.value }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} madgraph nf-element">
+			<span class="numberfrom"></span><span class="between"></span><span class="goal"></span>
+		</div>
+	<# } else if (data.value=='barsimple' || data.value=='barsimpleanimated') { #>
+		<div id="nf-field-{{{ data.id }}}" formid="{{{ data.formID }}}" graph-type="{{{ data.value }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} madgraph nf-element">
+			<div class="bar barsimple" style="background-color: {{{ bgcolor }}};">
+				<span class="perc" style="color: {{{ txtcolor }}}; background-color: {{{ color }}}; "></span>
+			</div>
+		</div>
+	<# } else if (data.value=='bar3d' || data.value=='bar3danimated') { #>
+		<div id="nf-field-{{{ data.id }}}" formid="{{{ data.formID }}}" graph-type="{{{ data.value }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} madgraph nf-element">
+			<div class="bar barsimple bar3d" style="background-color: {{{ bgcolor }}};"><span class="perc" style="color: {{{ txtcolor }}}; background-color: {{{ color }}}; "></span></div>
+		</div>
+	<# } #>
+</script>

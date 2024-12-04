@@ -1,0 +1,7 @@
+.madgraph { position: relative; display: block; box-sizing: border-box; }
+
+.madgraph .bar { position: relative; display: block; border:1px solid #ddd; background-color:#fff; }
+.madgraph .bar .perc { position: relative; display: block; padding: 5px 10px; height: 35px; background-color: red; color:#fff; text-align: right; font-size: 12px; margin: 5px; min-width:1%; width:0.1%; }
+
+.madgraph .bar3d { box-shadow: 1px 1px 0px #ddd, 2px 2px 0px #ddd, 3px 3px 0px #ddd, 4px 4px 0px #ddd; }
+.madgraph .bar.bar3d .perc { margin:0px; }
